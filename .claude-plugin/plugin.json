@@ -1,0 +1,53 @@
+{
+  "name": "lazyreader",
+  "version": "0.1.0",
+  "description": "Reads Claude's replies aloud, highlighting each sentence as it is spoken, from the reply's start or from where you point.",
+  "author": {
+    "name": "elranu"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/elranu/lazyreader",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "engine": {
+      "type": "string",
+      "title": "Voice engine",
+      "description": "edge-tts: neural voices through the edge-tts command, played with the player below. system: the platform's own synthesizer.",
+      "options": [
+        "edge-tts",
+        "system"
+      ],
+      "default": "edge-tts"
+    },
+    "voice": {
+      "type": "string",
+      "title": "Voice",
+      "description": "The voice's name: for edge-tts one of `edge-tts --list-voices` (es-AR-TomasNeural, es-AR-ElenaNeural, en-US-AriaNeural...); for system, the system voice's name, or empty for its default.",
+      "default": "es-AR-TomasNeural"
+    },
+    "rate": {
+      "type": "string",
+      "title": "Speed",
+      "description": "edge-tts speed, as a percentage over or under normal: +0%, +25%, -10%.",
+      "default": "+10%"
+    },
+    "player": {
+      "type": "string",
+      "title": "Player",
+      "description": "The command that plays each sentence's mp3 (edge-tts engine): mpv, ffplay or paplay. The file's path goes last.",
+      "default": "mpv --no-video --really-quiet"
+    },
+    "autoRead": {
+      "type": "boolean",
+      "title": "Read every reply",
+      "description": "Read each reply aloud as soon as the turn ends.",
+      "default": false
+    },
+    "speakerButton": {
+      "type": "boolean",
+      "title": "Speaker button",
+      "description": "Draw a small speaker button under each reply block that reads it from its start.",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "lazyreader",
+  "owner": { "name": "elranu" },
+  "plugins": [{ "name": "lazyreader", "source": "./" }]
+}
